@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue.js Intro</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="calc.js" defer></script>
+  </head>
+  <body>
+    <div id="app">
+      {{ message }}
+      <div>
+        1st number:
+        <input type="number" v-model="num1" />
+      </div>
+      <div>
+        2nd number:
+        <input type="number" v-model="num2" />
+      </div>
+      <div>
+        3rd number:
+        <input type="number" v-model="num3" />
+      </div>
+      <div><button v-on:click="computeSum()">Compute sum</button></div>
+      <div>
+        <input v-on:keyup.enter="computeSum()" />
+        HIT ENTER TO COMPUTE
+      </div>
+      <p>The sum is: {{sum}}</p>
+    </div>
+  </body>
+</html>
